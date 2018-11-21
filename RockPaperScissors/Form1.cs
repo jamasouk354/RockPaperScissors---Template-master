@@ -174,5 +174,10 @@ namespace RockPaperScissors
             Thread.Sleep(outcomePause);
             Refresh();
         }
+
+        public void determineWinner()
+        {
+
+        }
     }
 }
