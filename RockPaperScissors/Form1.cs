@@ -177,7 +177,25 @@ namespace RockPaperScissors
 
         public void determineWinner()
         {
-
+            if (cpuChoice == playerChoice)
+            {
+                ties++;
+                tiesLabel.Text = "Ties: " + ties;
+                g.DrawImage(tieImage, outcomeLocation);
+            }
+            else if (("rock" == "scissors" && "scissors" == "rock")||
+                ("scissors" == " paper"))
+            {
+                losses++;
+                lossesLabel.Text = "Losses: " + losses;
+                g.DrawImage(winImage, outcomeLocation);
+            }
+            else
+            {
+                losses++;
+                lossesLabel.Text = "Losses: " + losses;
+                g.DrawImage(loseImage, outcomeLocation);
+            }
         }
     }
 }
